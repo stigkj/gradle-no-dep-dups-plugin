@@ -1,0 +1,17 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile gradleApi()
+    groovy 'org.codehaus.groovy:groovy:1.7.8'
+}
+
+version = '1.0-SNAPSHOT'
+group = 'net.nisgits.gradle'
+
+defaultTasks 'install'
+

@@ -1,0 +1,31 @@
+apply plugin: 'groovy'
+apply plugin: 'check-dependency-dups'
+
+buildscript {
+    repositories {
+        mavenLocal()
+    }
+
+    dependencies {
+        classpath 'net.nisgits.gradle:gradle-check-dependency-dups-plugin:1.0-SNAPSHOT'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    groovy 'org.codehaus.groovy:groovy:1.7.8'
+    compile 'org.codehaus.groovy:groovy:1.7.8'
+    compile 'org.codehaus.groovy:groovy:1.7.6'
+    compile 'junit:junit:4.8.1'
+    testCompile 'junit:junit:4.8.1'
+    testCompile 'junit:junit:4.7'
+}
+
+version = '1.0-SNAPSHOT'
+group = 'net.nisgits.gradle'
+
+defaultTasks 'build'
+
